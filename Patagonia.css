@@ -1,0 +1,108 @@
+/* General page styles */
+body {
+    background-color: #1a2a1a;
+    font-family: 'Georgia', serif;
+    color: #f0ece0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+#top {
+    background-color: #0d1a0d;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 3px solid #4a7c4a;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color: #a8d5a2;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #a8d5a2;
+    border-bottom: 1px solid #4a7c4a;
+    padding-bottom: 8px;
+}
+
+/* Navigation */
+#navbar {
+    background-color: #0d1a0d;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+#navbar a {
+    color: #a8d5a2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+}
+
+#navbar a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Main content sections */
+#intro {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+#trails {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #0d1a0d;
+    border-radius: 8px;
+}
+
+#media {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#data {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px solid #4a7c4a;
+}
+
+/* List styling */
+ul {
+    line-height: 2;
+}
+
+ol {
+    line-height: 2;
+}
+
+/* Footer */
+#footer {
+    background-color: #0d1a0d;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    color: #a8d5a2;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #4a7c4a;
+}
