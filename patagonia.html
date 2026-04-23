@@ -32,7 +32,7 @@
       a 5-day journey through some of the most dramatic scenery imaginable. One day, I'll be there.
     </p>
     <img 
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Towers_of_Paine.jpg/1280px-Towers_of_Paine.jpg" 
+      src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Towers_of_Paine.jpg" 
       alt="Torres del Paine towers rising above the landscape">
     <p><em>The iconic Torres del Paine, Patagonia's most recognizable landmark.</em></p>
   </div>
@@ -70,26 +70,25 @@
   <div id="media">
     <h2>See It For Yourself</h2>
     <p>This video captures exactly why Patagonia is on every serious hiker's bucket list:</p>
-    <iframe 
-      width="720" 
-      height="405" 
-      src="https://www.youtube.com/embed/4ONQmHHtLZg" 
-      title="Patagonia Hiking Video" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    <iframe
+      width="100%"
+      height="415"
+      src="https://www.youtube-nocookie.com/embed/4ONQmHHtLZg"
+      title="Patagonia Hiking Video"
+      frameborder="0"
       allowfullscreen>
     </iframe>
   </div>
 
   <div id="data">
     <h2>Patagonia Trail Data</h2>
-    <p>This visualization shows hiking and adventure travel trends — giving you a sense 
-    of just how popular Patagonia has become as a destination:</p>
-    <div class='tableauPlaceholder' id='viz1' style='position: relative'>
+    <p>This visualization explores fishing and port data from the Patagonia region of South America:</p>
+
+    <div class='tableauPlaceholder' id='viz1776912770164' style='position: relative'>
       <noscript>
         <a href='#'>
-          <img alt='Patagonia Trails' 
-          src='https://public.tableau.com/static/images/Hi/HikingTrails/Sheet1/1_rss.png' 
+          <img alt='DASH PUERTO' 
+          src='https://public.tableau.com/static/images/De/DesembarquesPesqueros/DASHPUERTO/1_rss.png' 
           style='border: none' />
         </a>
       </noscript>
@@ -97,21 +96,31 @@
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='WorldTourism/TourismDashboard' />
+        <param name='name' value='DesembarquesPesqueros/DASHPUERTO' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/De/DesembarquesPesqueros/DASHPUERTO/1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
         <param name='display_overlay' value='yes' />
         <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
       </object>
     </div>
     <script type='text/javascript'>
-      var divElement = document.getElementById('viz1');
+      var divElement = document.getElementById('viz1776912770164');
       var vizElement = divElement.getElementsByTagName('object')[0];
-      vizElement.style.width = '100%';
-      vizElement.style.height = '600px';
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '1600px';
+        vizElement.style.height = '927px';
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '1600px';
+        vizElement.style.height = '927px';
+      } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '2727px';
+      }
       var scriptElement = document.createElement('script');
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
