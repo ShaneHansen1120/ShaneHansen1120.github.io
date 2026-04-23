@@ -204,13 +204,13 @@
         <label><input type="checkbox" id="solo"> Solo traveler</label>
       </div>
 
-      <button onclick="generateList()">Generate My Packing List</button>
+      <button id="generateBtn">Generate My Packing List</button>
     </div>
 
     <div class="card" id="result">
       <h2>Your Custom Packing List</h2>
       <div id="result-content"></div>
-      <button class="reset-btn" onclick="resetForm()">← Start Over</button>
+      <button class="reset-btn" id="resetBtn">← Start Over</button>
     </div>
 
     <a href="patagonia.html" class="back-link">← Back to Patagonia Page</a>
@@ -218,6 +218,9 @@
   </div>
 
   <script>
+    document.getElementById('generateBtn').addEventListener('click', generateList);
+    document.getElementById('resetBtn').addEventListener('click', resetForm);
+
     function generateList() {
       const duration = parseInt(document.getElementById('duration').value);
       const difficulty = document.getElementById('difficulty').value;
@@ -231,7 +234,6 @@
 
       const list = [];
 
-      // Clothing
       const clothing = {
         title: "👕 Clothing",
         items: [
@@ -254,7 +256,6 @@
       if (glacier) clothing.items.push("Gaiters for glacier travel");
       list.push(clothing);
 
-      // Footwear
       const footwear = {
         title: "👟 Footwear",
         items: ["Waterproof hiking boots (broken in before the trip)", "Camp sandals or lightweight shoes"],
@@ -263,7 +264,6 @@
       if (river) footwear.items.push("Trekking sandals or water shoes for crossings");
       list.push(footwear);
 
-      // Shelter & Sleep
       const shelter = {
         title: "⛺ Shelter & Sleep",
         items: [],
@@ -285,7 +285,6 @@
       }
       list.push(shelter);
 
-      // Navigation
       const nav = {
         title: "🗺️ Navigation",
         items: [
@@ -298,7 +297,6 @@
       if (solo) nav.items.push("Personal locator beacon (PLB) or satellite communicator (e.g. Garmin inReach)");
       list.push(nav);
 
-      // Food & Water
       const food = {
         title: "🍫 Food & Water",
         items: [
@@ -314,7 +312,6 @@
       if (difficulty === "hard") food.items.push("Extra high-calorie emergency rations");
       list.push(food);
 
-      // Health & Safety
       const health = {
         title: "🩹 Health & Safety",
         items: [
@@ -332,7 +329,6 @@
       if (altitude) health.items.push("Altitude sickness medication (consult a doctor)");
       list.push(health);
 
-      // Gear & Accessories
       const gear = {
         title: "🔧 Gear & Accessories",
         items: [
@@ -349,7 +345,6 @@
       if (glacier) gear.items.push("Microspikes or crampons");
       list.push(gear);
 
-      // Documents
       const docs = {
         title: "📄 Documents & Money",
         items: [
@@ -363,7 +358,6 @@
       };
       list.push(docs);
 
-      // Build HTML
       let html = '';
       list.forEach(cat => {
         html += `<div class="category">
